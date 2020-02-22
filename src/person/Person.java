@@ -13,6 +13,13 @@ public class Person {
     private ArrayList<String> contacts;
     private String email;
 
+    public Person(String firstName,String lastName,ArrayList<String> contacts,String email){
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.email=email;
+        this.contacts=contacts;
+    }
+
     public String getFirstName() {
         return firstName;
     }

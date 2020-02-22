@@ -1,9 +1,12 @@
 package Main;
 
+import person.Person;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println ("Welcome to Divyanshi's Contact List App");
         System.out.println ("Press 1 to add a new contact");
