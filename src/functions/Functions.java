@@ -23,5 +23,6 @@ public class Functions {
         System.out.println ("enter your email address.");
         String email = scanner.nextLine ();
         linkedList.addLast ( new Person (firstName,lastName,arrayList,email));
+        System.out.println (firstName+" "+lastName+ "  has been added.");
     }
 }
