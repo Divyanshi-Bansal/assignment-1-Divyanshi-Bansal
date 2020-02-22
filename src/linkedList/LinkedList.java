@@ -7,8 +7,8 @@ import person.Person;
         private Node last;
 
         public void addLast(Person element) {
-            Node node = new Node(element);
-            if (isEmpty()) {
+            Node node = new Node ( element );
+            if (isEmpty ()) {
                 first = last = node;
             } else {
                 last.next = node;
@@ -17,8 +17,8 @@ import person.Person;
         }
 
         public void addFirst(Person element) {
-            Node node = new Node(element);
-            if (isEmpty()) {
+            Node node = new Node ( element );
+            if (isEmpty ()) {
                 first = last = node;
             } else {
                 node.next = first;
@@ -30,12 +30,12 @@ import person.Person;
             return first == null;
         }
 
-        public int indexOf(String firstName,String email) {
+        public int indexOf(String firstName , String email) {
             Node current = first;
             int index = 0;
             while (current != null) {
-                if ((current.value.getFirstName().equals(firstName)
-                        &&current.value.getEmail().equals(email))){
+                if ((current.value.getFirstName ().equals ( firstName )
+                        && current.value.getEmail ().equals ( email ))) {
                     return index;
                 }
                 index++;
@@ -44,8 +44,8 @@ import person.Person;
             return -1;
         }
 
-        public boolean contains(String firstName,String email) {
-            if (indexOf(firstName,email) != -1) {
+        public boolean contains(String firstName , String email) {
+            if (indexOf ( firstName , email ) != -1) {
                 return true;
             }
             return false;
@@ -63,7 +63,7 @@ import person.Person;
         }
 
         public void removeLast() {
-            var previousNode = getPreviousNode(last);
+            var previousNode = getPreviousNode ( last );
             last = previousNode;
             last.next = null;
         }
@@ -77,21 +77,20 @@ import person.Person;
             }
             return index;
         }
-        public void deleteNode(int position)
-        {
+
+        public void deleteNode(int position) {
             // If linked list is empty
             if (first == null)
                 return;
             // Store head node
             Node temp = first;
             // If head needs to be removed
-            if (position == 0)
-            {
+            if (position == 0) {
                 first = temp.next;   // Change head
                 return;
             }
             // Find previous node of the node to be deleted
-            for (int i=0; temp!=null && i<position-1; i++)
+            for (int i = 0; temp != null && i < position - 1; i++)
                 temp = temp.next;
             // If position is more than number of ndoes
             if (temp == null || temp.next == null)
@@ -116,49 +115,49 @@ import person.Person;
 
         public void display() {
             var current = first;
-            System.out.println("Contact list--->");
-            System.out.println();
+            System.out.println ( "Contact list--->" );
+            System.out.println ();
             while (current != null) {
-                System.out.println("-----------------------*-------------------------");
-                System.out.println("Name:" + current.value.getFirstName() + " " + current.value.getLastName());
-                System.out.println("Contacts:" + current.value.getContacts().toString());
-                System.out.println("Email:" + current.value.getEmail());
-                System.out.println("------------------------*-------------------------");
-                System.out.println();
+                System.out.println ( "-----------------------*-------------------------" );
+                System.out.println ( "Name:" + current.value.getFirstName () + " " + current.value.getLastName () );
+                System.out.println ( "Contacts:" + current.value.getContacts ().toString () );
+                System.out.println ( "Email:" + current.value.getEmail () );
+                System.out.println ( "------------------------*-------------------------" );
+                System.out.println ();
                 current = current.next;
             }
-            System.out.println();
+            System.out.println ();
         }
 
-        public void displayOne(){
+        public void displayOne() {
             var current = first;
             int count = 0;
-            System.out.println("-----------------------*-------------------------");
+            System.out.println ( "-----------------------*-------------------------" );
             while (current != null) {
-                System.out.println(count+" Name:"+current.value.getFirstName()+" "+current.value.getLastName());
+                System.out.println ( count + " Name:" + current.value.getFirstName () + " " + current.value.getLastName () );
                 current = current.next;
                 count++;
             }
-            System.out.println("------------------------*-------------------------");
-            System.out.println();
+            System.out.println ( "------------------------*-------------------------" );
+            System.out.println ();
         }
 
-        public void getNode(int pos){
+        public void getNode(int pos) {
             var current = first;
-            int index= 0;
-            while(current!=null){
-                if(index==pos){
-                    System.out.println();
-                    System.out.println("-----------------------*-------------------------");
-                    System.out.println("Name:" + current.value.getFirstName() + " " + current.value.getLastName());
-                    System.out.println("Contacts:" + current.value.getContacts().toString());
-                    System.out.println("Email:" + current.value.getEmail());
-                    System.out.println("------------------------*-------------------------");
-                    System.out.println();
+            int index = 0;
+            while (current != null) {
+                if (index == pos) {
+                    System.out.println ();
+                    System.out.println ( "-----------------------*-------------------------" );
+                    System.out.println ( "Name:" + current.value.getFirstName () + " " + current.value.getLastName () );
+                    System.out.println ( "Contacts:" + current.value.getContacts ().toString () );
+                    System.out.println ( "Email:" + current.value.getEmail () );
+                    System.out.println ( "------------------------*-------------------------" );
+                    System.out.println ();
                     break;
                 }
                 index++;
-                current=current.next;
+                current = current.next;
             }
         }
 
@@ -171,5 +170,3 @@ import person.Person;
             }
         }
     }
-
-}
