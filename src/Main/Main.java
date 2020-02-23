@@ -27,7 +27,7 @@ public class Main {
             switch(choice){
                 case "1":functions.addContacts (linkedList);
                     break;
-                case "2":// viewContacts()
+                case "2":functions.showContacts ( linkedList );
                     break;
                 case "3"://search()
                     break;

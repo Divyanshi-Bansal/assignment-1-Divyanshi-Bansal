@@ -25,4 +25,9 @@ public class Functions {
         linkedList.addLast ( new Person (firstName,lastName,arrayList,email));
         System.out.println (firstName+" "+lastName+ "  has been added.");
     }
+
+    public void showContacts(LinkedList linkedList){
+        System.out.println ("Contact List--->");
+        linkedList.display ();
+    }
 }
