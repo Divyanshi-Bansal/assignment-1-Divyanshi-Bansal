@@ -35,6 +35,7 @@ public class Main {
                     break;
                 case "5":
                     System.out.println ("Thankyou for using Our app! ");
+                    choice ="5";
                     break;
                 default:
                     System.out.println ("Invalid choice!");

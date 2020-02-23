@@ -9,10 +9,11 @@ import java.util.Scanner;
 public class Functions {
     LinkedList linkedList  =new LinkedList ();
     Scanner scanner = new Scanner ( System.in );
-    ArrayList arrayList = new ArrayList<String> (  );
+
 
     //addContacts
     public void addContacts(LinkedList linkedList){
+        ArrayList arrayList = new ArrayList<String> (  );
         System.out.println ("Enter your first name.");
         String firstName = scanner.nextLine ();
         System.out.println ("Enter your last name.");
