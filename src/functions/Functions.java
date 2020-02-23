@@ -30,4 +30,24 @@ public class Functions {
         System.out.println ("Contact List--->");
         linkedList.display ();
     }
+
+    public void searchContact(LinkedList linkedList){
+        System.out.println ("Enter First Name:");
+        String name = scanner.nextLine ();
+        System.out.println ("Email.?");
+        String email = scanner.nextLine ();
+        if(linkedList.indexOf (name,email)>=0){
+            System.out.println ("Match Found!! Hurray!");
+            linkedList.getNode (linkedList.indexOf (name,email));
+        }
+        else{
+            System.out.println ("Oops not found! Try again.");
+        }
+
+    }
+
+    public void deleteContact(LinkedList linkedList){
+        System.out.println ("Choose the no.");
+        linkedList.deleteNode (  );
+    }
 }

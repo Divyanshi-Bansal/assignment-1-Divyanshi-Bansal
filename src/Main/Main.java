@@ -29,7 +29,7 @@ public class Main {
                     break;
                 case "2":functions.showContacts ( linkedList );
                     break;
-                case "3"://search()
+                case "3":functions.searchContact ( linkedList );
                     break;
                 case "4"://delete
                     break;
