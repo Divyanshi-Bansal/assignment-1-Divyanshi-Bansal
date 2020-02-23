@@ -33,13 +33,12 @@ public class Main {
                     break;
                 case "4":functions.deleteContact (linkedList);
                     break;
-                case "5"://exit
+                case "5":
+                    System.out.println ("Thankyou for using Our app! ");
                     break;
                 default:
-                    //invalid choice
+                    System.out.println ("Invalid choice!");
             }
-
         }
-
     }
 }

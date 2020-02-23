@@ -27,7 +27,7 @@ public class Functions {
     }
 
     public void showContacts(LinkedList linkedList){
-        System.out.println ("Contact List--->");
+//        System.out.println ("Contact List--->");
         linkedList.display ();
     }
 
@@ -50,6 +50,10 @@ public class Functions {
         linkedList.displayOne();
         System.out.println ("Choose the no. against the contact you wanna delete..");
         int pos = scanner.nextInt ();
+        scanner.nextLine ();
         linkedList.deleteNode (pos);
+        System.out.println ("congooo!! your contact delete.");
     }
+
+    //public void exit(){}
 }
