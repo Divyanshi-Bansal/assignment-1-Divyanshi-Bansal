@@ -31,7 +31,7 @@ public class Main {
                     break;
                 case "3":functions.searchContact ( linkedList );
                     break;
-                case "4"://delete
+                case "4":functions.deleteContact (linkedList);
                     break;
                 case "5"://exit
                     break;

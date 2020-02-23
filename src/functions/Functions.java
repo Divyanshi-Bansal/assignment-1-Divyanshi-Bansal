@@ -47,7 +47,9 @@ public class Functions {
     }
 
     public void deleteContact(LinkedList linkedList){
-        System.out.println ("Choose the no.");
-        linkedList.deleteNode (  );
+        linkedList.displayOne();
+        System.out.println ("Choose the no. against the contact you wanna delete..");
+        int pos = scanner.nextInt ();
+        linkedList.deleteNode (pos);
     }
 }
